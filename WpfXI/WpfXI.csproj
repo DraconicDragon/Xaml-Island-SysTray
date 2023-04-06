@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<UseWPF>true</UseWPF>
+		<UseWindowsForms>true</UseWindowsForms>
+		<Platforms>AnyCPU;x86;x64</Platforms>
+		<AssetTargetFallback>uap10.0.22000</AssetTargetFallback>
+		<TargetPlatformVersion>10.0.22000</TargetPlatformVersion>
+		<StartupObject>WpfXI.Programs</StartupObject>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Toolkit.Forms.UI.XamlHost" Version="6.1.2" />
+		<PackageReference Include="Microsoft.Toolkit.Wpf.UI.XamlHost" Version="6.1.2" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\MyUwpApp\MyUwpApp.csproj" />
+		<ProjectReference Include="..\UWPClassLibrary\UWPClassLibrary.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Update="Microsoft.VCRTForwarders.140" Version="1.0.7" />
+	</ItemGroup>
+
+</Project>

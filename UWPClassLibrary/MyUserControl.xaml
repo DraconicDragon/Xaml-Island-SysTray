@@ -1,0 +1,34 @@
+﻿<UserControl
+    x:Class="UWPClassLibrary.MyUserControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:UWPClassLibrary"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:winui="using:Microsoft.UI.Xaml.Controls"
+    d:DesignHeight="300"
+    d:DesignWidth="400"
+    mc:Ignorable="d">
+
+    <StackPanel Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock>This is a simple custom WinRT XAML control</TextBlock>
+        <Rectangle
+            Width="100"
+            Height="100"
+            Fill="Blue" />
+        <TextBlock FontSize="50" Text="{x:Bind XamlIslandMessage}" />
+        <winui:ProgressRing IsIndeterminate="True" />
+        <Button
+            x:Name="MyButton"
+            Click="MyButton_Click"
+            Content="Open Flyout" />
+
+        <FlyoutBase.AttachedFlyout>
+            <Flyout x:Name="flyout" ShouldConstrainToRootBounds="False">
+                <Flyout.Content>
+                    <TextBlock Text="adwadadwaaaaaaaaaaad" />
+                </Flyout.Content>
+            </Flyout>
+        </FlyoutBase.AttachedFlyout>
+    </StackPanel>
+</UserControl>
