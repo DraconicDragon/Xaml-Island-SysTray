@@ -5,10 +5,11 @@
 		<TargetFramework>netcoreapp3.1</TargetFramework>
 		<UseWPF>true</UseWPF>
 		<UseWindowsForms>true</UseWindowsForms>
-		<Platforms>AnyCPU;x86;x64</Platforms>
+		<Platforms>x86;x64</Platforms>
 		<AssetTargetFallback>uap10.0.22000</AssetTargetFallback>
 		<TargetPlatformVersion>10.0.22000</TargetPlatformVersion>
 		<StartupObject>WpfXI.Programs</StartupObject>
+
 	</PropertyGroup>
 
 	<ItemGroup>
