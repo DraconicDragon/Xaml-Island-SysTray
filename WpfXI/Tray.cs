@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
 using System.Windows.Forms;
-using System.Windows.Threading;
 using Windows.UI.Xaml.Controls;
 
 namespace WpfXI
@@ -32,7 +27,7 @@ namespace WpfXI
             trayForm.Activate();
 
 
-
+            // TODO: Create Flyout from data received by RPC (Socket and JSON data?) 
             var flyout = new MenuFlyout();
             flyout.Items.Add(new MenuFlyoutSubItem { Text = "First subitem" });
             flyout.Items.Add(new MenuFlyoutSubItem { Text = "Second subitem" });
@@ -45,11 +40,11 @@ namespace WpfXI
             flyout.Items.Add(new MenuFlyoutSeparator());
             flyout.Items.Add(new MenuFlyoutItem { Text = "Third looooooong item" });
 
-            var fourthItem = new MenuFlyoutItem { Text = "Fourth item" };
+            var fourthItem = new MenuFlyoutItem { Text = "Show Main App" };
             fourthItem.Click += (sender, e) => ShowWindow();
             flyout.Items.Add(fourthItem);
 
-            var fifthItem = new MenuFlyoutItem { Text = "Fifth item with icon", Icon = new SymbolIcon(Symbol.Cancel) };
+            var fifthItem = new MenuFlyoutItem { Text = "Exit", Icon = new SymbolIcon(Symbol.Cancel) };
             fifthItem.Click += (sender, e) =>
             {
                 trayForm.Close();
@@ -64,10 +59,10 @@ namespace WpfXI
             trayXamlHost.Child = container;
 
             var notifyIcon = new NotifyIcon();
-            notifyIcon.Icon = new Icon(@"C:\Users\Drac\Downloads\icon.ico");
+            notifyIcon.Icon = new Icon(@"C:\Users\Drac\Downloads\icon.ico"); // TODO: Change path to work anywhere
             notifyIcon.Visible = true;
 
-            notifyIcon.MouseUp += (sender, e) => // needs debugging
+            notifyIcon.MouseUp += (sender, e) => // TODO: Find out why Flyout shows wrong position on first use
             {
                 // Flyout shows around top left corner of wpf window on first use
                 //trayForm.Location = new System.Drawing.Point(System.Windows.Forms.Cursor.Position.X, System.Windows.Forms.Cursor.Position.Y);
