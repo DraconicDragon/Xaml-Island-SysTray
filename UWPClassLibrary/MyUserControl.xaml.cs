@@ -43,9 +43,5 @@ namespace UWPClassLibrary
                 Position = new Point((int)b, (int)c)
             });
         }
-        public void closeFlyout()
-        {
-            flyout.Hide();
-        }
     }
 }

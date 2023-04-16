@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<AssetTargetFallback>uap10.0.22000</AssetTargetFallback>
+		<TargetPlatformVersion>10.0.22000</TargetPlatformVersion>
+		<UseWindowsForms>true</UseWindowsForms>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\MyUwpApp\MyUwpApp.csproj" />
+		<ProjectReference Include="..\UWPClassLibrary\UWPClassLibrary.csproj" />
+	</ItemGroup>
+
+</Project>

@@ -17,7 +17,7 @@
             Height="100"
             Fill="Blue" />
         <TextBlock FontSize="50" Text="{x:Bind XamlIslandMessage}" />
-        <winui:ProgressRing IsIndeterminate="True" />
+        <!--<winui:ProgressRing IsIndeterminate="True" />-->
         <Button
             x:Name="MyButton"
             Click="MyButton_Click"
